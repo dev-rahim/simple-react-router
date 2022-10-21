@@ -15,7 +15,7 @@ const Header = () => {
                 activeStyle={{
                     fontWeight: "bold",
                     color: "lime"
-                }}
+            }}
             >Friends</NavLink>
             <NavLink to='/about'>About</NavLink>
         </nav>

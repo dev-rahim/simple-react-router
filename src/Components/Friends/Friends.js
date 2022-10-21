@@ -22,7 +22,7 @@ const Friends = () => {
             <h2>Total Friends: {friends.length}</h2>
             <div className='Friends'>
                 {
-                    friends.map(friend => <Friend friend={friend} />)
+                    friends.map(friend => < Friend key={friend.id} friend={friend} />)
                 }
             </div>
         </div>
