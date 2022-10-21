@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import './App.css';
 import About from './Components/About/About';
+import Culture from './Components/Culture/Culture';
 import FriendDetails from './Components/FriendDetails/FriendDetails';
 import Friends from './Components/Friends/Friends';
 import Header from './Components/Header/Header';
@@ -17,8 +18,11 @@ function App() {
           <Route path='/home'>
             <Home />
           </Route>
-          <Route path='/about'>
+          <Route exact path='/about'>
             <About />
+          </Route>
+          <Route path='/about/culture'>
+            <Culture />
           </Route>
           <Route path='/friends' >
             <Friends />
@@ -29,7 +33,7 @@ function App() {
           <Route exact path='/'>
             <Home />
           </Route>
-          <Route path='' >
+          <Route path='*' >
             <NotFound></NotFound>
           </Route>
         </Switch>

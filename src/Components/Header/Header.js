@@ -1,23 +1,26 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom/cjs/react-router-dom.min';
+import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
 import './Header.css'
 
 const Header = () => {
+    const activeClass = {
+        fontWeight: "bold",
+        color: "lime",
+    };
     return (
         <nav>
             <NavLink to='/home'
-                activeStyle={{
-                    fontWeight: "bold",
-                    color: "lime"
-                }}
+                activeStyle={activeClass}
             >Home</NavLink>
             <NavLink to='/friends'
-                activeStyle={{
-                    fontWeight: "bold",
-                    color: "lime"
-            }}
+                activeStyle={activeClass}
             >Friends</NavLink>
-            <NavLink to='/about'>About</NavLink>
+            <NavLink to='/about'
+                activeStyle={activeClass}>About
+            </NavLink>
+            <NavLink to='/about/culture'
+                activeStyle={activeClass}>
+                Culture</NavLink>
         </nav>
     );
 };
