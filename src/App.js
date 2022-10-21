@@ -1,15 +1,18 @@
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import './App.css';
 import About from './Components/About/About';
 import Friends from './Components/Friends/Friends';
+import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import NotFound from './Components/NotFound/NotFound';
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <Router>
+        <Header />
+
         <Switch>
           <Route path='/home'>
             <Home />
@@ -27,7 +30,7 @@ function App() {
             <NotFound></NotFound>
           </Route>
         </Switch>
-      </BrowserRouter>
+      </Router>
     </div>
   );
 }

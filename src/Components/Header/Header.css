@@ -1,0 +1,13 @@
+nav {
+    background-color: #070707;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 5px 15px;
+    line-height: 50px;
+    color: aliceblue;
+    margin-right: 20px;
+    border: 1px solid aliceblue;
+}
+
